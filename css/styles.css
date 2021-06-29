@@ -18,6 +18,7 @@
     --icon-color: #afb1b8;
     --footer-icon: rgba(255, 255, 255, 0.1);
     --hero-background: url(../images/background.jpg);
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
@@ -125,6 +126,8 @@ img {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    transition: fill 250ms var(--timing-function);
+    transition: background 250ms var(--timing-function);
     
  }
  .icons-list li:active,
@@ -193,17 +196,41 @@ margin-right: auto;
      width: 10px;
      height: 16px;
  }
-.nav a:hover,
-.nav a:focus,
+ .menu-link {
+    display: block;
+    position: relative;   
+}
+.menu-link:hover,
+.menu-link:focus,
 .contacts a:hover,
-.contacts a:focus
+.contacts a:focus,
+.active
  {
     color: var(--pretty-color);
+    transition: color 250ms var(--timing-function);
 }
-.active {
-    color: var(--pretty-color);
 
+.menu-link::after
+ {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--pretty-color);
+    left: 0;
+    bottom: 0; 
+    opacity: 0;
+    transition: opacity 250ms var(--timing-function);
 }
+
+.menu-link:hover::after,
+.menu-link:focus::after,
+.active::after {
+    opacity: 1;
+}
+
+
 /*----------Hero Section--------*/
 
 .hero {
@@ -241,6 +268,7 @@ margin-right: auto;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 250ms var(--timing-function);
 }
 .sign-in:hover {
     background-color: var(--button-hover);
@@ -354,7 +382,7 @@ margin-right: auto;
     color: var(--icon-color);
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-    
+    transition: color 250ms var(--timing-function);
 }
 
 .clients-list a:hover,
@@ -423,9 +451,11 @@ margin-right: auto;
     margin-right: 82px;
    
 }
-.adress-link {
+.adress-link a{
     color: var(--adress-link-color);
+    transition: color 250ms var(--timing-function);
 }
+
 .socialmedia {
     margin-left: 0;
 }
@@ -438,6 +468,7 @@ margin-right: auto;
 }
 .socialmedia li {
     background: var(--footer-icon);
+    transition: background 250ms var(--timing-function);
 }
 .adress-link a:hover,
 .adress-link a:focus {
@@ -473,7 +504,10 @@ button {
     color: var(--header-color);
     border: 0;
     border-radius: 4px;
-    cursor: pointer;   
+    cursor: pointer; 
+    transition: background-color 250ms var(--timing-function); 
+    /* transition: color 250ms var(--timing-function); */
+    transition: box-shadow 250ms var(--timing-function); 
 }
 
 .all,
@@ -510,6 +544,9 @@ button:hover {
     flex-basis: (100% / 3 - 30px);
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
+}
+.project {
+    transition: box-shadow 250ms var(--timing-function);
 }
 .project:hover {
     box-shadow: 0px 1px 1px
