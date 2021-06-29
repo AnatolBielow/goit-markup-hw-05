@@ -1,0 +1,535 @@
+:root {
+    --pretty-color: #2196F3;
+    --while-color: #FFFFFF;
+    --header-color: #212121;
+    --text-color: #757575;
+    --border-color: #ECECEC;
+    --background-about-color: #2F303A;
+    --backgroung-team-color: #F5F4FA;
+    --footer-color: #2F303A;
+    --adress-link-color: rgba(255, 255, 255, 0.6);
+    --main-font: Roboto, sans-serif;
+    --logo-font: Raleway, sans-serif;
+    --black-color: #000000;
+    --button-color: #F5F4FA;
+    --button-hover: #188CE8;
+    --body-color: #E5E5E5;
+    --card-set-gap: 30px;
+    --icon-color: #afb1b8;
+    --footer-icon: rgba(255, 255, 255, 0.1);
+    --hero-background: url(../images/background.jpg);
+
+
+}
+/*------Global Styles------*/
+html {
+    box-sizing: border-box;
+}
+*,
+::before,
+::after
+{
+ 
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font-family: var(--main-font);
+    text-decoration: none;
+    background-color:var(--body-color) ;
+    color: var(--text-color);
+    background-color: var(--while-color);
+}
+
+ul {
+    list-style: none;
+    margin: 0; 
+
+} 
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 1200px;
+    padding: 0 15px; 
+
+}
+.section {
+  
+    padding-top: 94px;
+    padding-bottom: 94px;
+ }
+ 
+/*-------Header Section---------*/
+.header {
+    box-sizing: border-box;
+    background-color: var(--while-color);
+    color: var(--header-color);
+    font-weight: 500;
+    font-size: 14px;
+    border-bottom: solid 1px var(--border-color);
+
+}
+
+/*---Logo---*/
+.logo {
+
+    display: flex;
+    margin-left: 0;
+    margin-right: 40px;
+    font-family: var(--logo-font);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    align-items: center;
+}
+.web {
+    color: var(--pretty-color);   
+}
+.studio1 {
+    color: var(--black-color);
+}
+
+.studio2 {
+    color: var(--while-color);
+}
+/* ----------Icons-------------- */
+
+.icon {
+
+    width: 20px;
+    height: 20px;
+}
+.icons-list {
+    margin-bottom: 30px;    
+}
+.icons-list :not(:first-child) {
+    margin-left: 10px;
+}
+.icons-list a {
+    padding: 12px;
+}
+
+ .icons-list li {
+    display: inline-block;
+    fill: var(--icon-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    
+ }
+ .icons-list li:active,
+ .icons-list li:hover {
+     background: var(--pretty-color);
+     fill: var(--while-color);
+   
+ }
+ 
+ 
+ .feature-icon {
+     width: 70px;
+     height: 70px;
+     margin: 25px 100px 55px 100px;
+ }
+
+ .header .container { 
+    display: flex;
+    align-items: center;
+} 
+
+ .menu {   
+    display: flex;
+ } 
+.menu a {
+    padding: 32px 0;
+}
+ 
+.nav { 
+display: flex;
+margin-left: 0;
+margin-right: auto;
+}
+
+.nav li {
+    display: flex;
+    margin-left: 50px;
+
+}
+
+.contacts {
+     display: flex;
+    margin-right: 0;
+    color: var(--text-color);
+ }  
+.contacts li {
+    margin-left: 50px;
+}
+ .contact a {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 16px;
+    
+ } 
+ .contacts-icon {
+     margin-right: 10px;
+     fill: currentColor;
+ }
+ .envelope {
+     width: 16px;
+     height: 12px;    
+ }
+ .smartphone {
+     width: 10px;
+     height: 16px;
+ }
+.nav a:hover,
+.nav a:focus,
+.contacts a:hover,
+.contacts a:focus
+ {
+    color: var(--pretty-color);
+}
+.active {
+    color: var(--pretty-color);
+
+}
+/*----------Hero Section--------*/
+
+.hero {
+    width: 1600px;
+    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/background.jpg);
+    height: 600px;
+    color: var(--header-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+.hero-content {
+    width: 660px;
+    color: var(--while-color);
+    padding-top: 106px;
+
+}
+.hero-title {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.363;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  
+}
+
+.sign-in {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.875;
+    padding: 10px 32px; 
+    background-color: var(--pretty-color);
+    color: var(--while-color);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.sign-in:hover {
+    background-color: var(--button-hover);
+}
+
+/*----------Features Section---------*/
+.features {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: var(--text-color);    
+}    
+.features ul {
+    display: flex;
+}
+.features-title {
+    color: transparent;
+    font-size: 0;
+ 
+}
+.feature {
+    width: 270px;
+    margin-left: 0;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+}
+
+.feature-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--header-color);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+/*--------Studio Section---------*/
+
+ .studio {
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    padding-top: 0;
+}
+.studio ul {
+    display: flex;
+}
+ .studio-title {
+    color: var(--header-color);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.studio-items:first-child {
+    margin-left: 0;
+}
+ /*--------Team Section-----------*/
+.team {
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    background-color: var(--backgroung-team-color);
+    text-align: center;
+
+
+ }
+ .members {
+     display: flex;
+ }
+.team-title {
+    color: var(--header-color);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+   
+ 
+}
+.member {
+    background: var(--while-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+.member p{
+    margin-bottom: 15px;
+}
+.name {
+    color: var(--header-color);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2.3em;
+    margin-bottom: 1em;
+} 
+
+/* -------Clients Section----- */
+.clients-title {
+    color: var(--header-color);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.clients-list {
+    display: flex;
+}
+
+.clients-list a {
+    display: flex;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    color: var(--icon-color);
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    
+}
+
+.clients-list a:hover,
+.clients-list a:active {
+    border-color: var(--pretty-color);
+    color: var(--pretty-color);
+}
+/*----------Company Logo----- */
+
+.group1 {
+    width: 41px;
+    height: 46.7px;
+    fill: currentColor;
+}
+.group2 {
+    width: 40px;
+    height: 52px;
+    fill: currentColor;
+}
+.group3 {
+    width: 43.46px;
+    height: 41.18px;
+    fill: currentColor;
+}
+.group4 {
+    width: 84.44px;
+    height: 40.62px;
+    fill: currentColor;
+}
+.group5 {
+    width: 62.54px;
+    height: 45.43px;
+    fill: currentColor;
+}
+.group6 {
+    width: 93.79px;
+    height: 43.93px;
+    fill: currentColor;
+}
+
+/*------Footer Section-------*/   
+.footer {
+    background-color: var(--footer-color);
+    box-sizing: border-box;
+    color:var(--while-color);
+    font-size: 14px;
+    line-height: 1.714;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+.footer .container {
+    display: flex;
+
+}
+
+.footer li {
+    margin-bottom: 9px;
+}
+.footer .logo {
+    padding-top: 0;
+    margin-bottom: 20px;
+}
+.adress {
+    font-style: normal;
+    margin-left: 0;
+    margin-right: 82px;
+   
+}
+.adress-link {
+    color: var(--adress-link-color);
+}
+.socialmedia {
+    margin-left: 0;
+}
+.socialmedia h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+.socialmedia li {
+    background: var(--footer-icon);
+}
+.adress-link a:hover,
+.adress-link a:focus {
+    color: var(--pretty-color);
+}
+
+
+/*--------------------Portfolio--------------------------*/
+
+.hero-portfolio {
+   color: transparent;
+    font-size: 0; 
+}
+
+
+/* -------Buttons bar--------- */
+
+.bar-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.bar-buttons li {
+    margin: 0 4px;
+}
+button {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.875;
+    padding: 6px 22px; 
+    letter-spacing: 0.03em;
+    background-color: var(--button-color);
+    color: var(--header-color);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;   
+}
+
+.all,
+button:focus,
+button:hover {
+    background-color: var(--pretty-color);
+    color: var(--while-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+     0px 1px 2px rgba(0, 0, 0, 0.08),
+     0px 2px 2px rgba(0, 0, 0, 0.12);
+} 
+
+/* ----------Projects----------- */
+.portfolio {
+
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+}
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    margin-left: calc( -1 * var(--card-set-gap));
+    margin-top: calc( -1 * var(--card-set-gap));
+
+}
+
+.card-set > .item {
+    
+    flex-basis: (100% / 3 - 30px);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+}
+.project:hover {
+    box-shadow: 0px 1px 1px
+     rgba(0, 0, 0, 0.12),
+     0px 4px 4px rgba(0, 0, 0, 0.06), 
+     1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
+.project-title {
+    color: var(--header-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+.card-content {
+    padding: 20px 24px;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+} 
+
