@@ -505,10 +505,10 @@ button {
     border: 0;
     border-radius: 4px;
     cursor: pointer; 
-    transition: background-color 250ms var(--timing-function); 
+    transition: background-color, box-shadow 250ms var(--timing-function); 
     /* transition: color 250ms var(--timing-function); */
-    transition: box-shadow 250ms var(--timing-function); 
-}
+    /* transition:  250ms var(--timing-function); */
+} 
 
 .all,
 button:focus,
@@ -553,7 +553,7 @@ button:hover {
      rgba(0, 0, 0, 0.12),
      0px 4px 4px rgba(0, 0, 0, 0.06), 
      1px 4px 6px rgba(0, 0, 0, 0.16);
-
+    
 }
 .project-title {
     color: var(--header-color);
@@ -569,4 +569,27 @@ button:hover {
     border-bottom: 1px solid var(--border-color);
     cursor: pointer;
 } 
+.card-thumb {
+    position: relative;
+    overflow: hidden;
+}
 
+.thumb-overlay {
+    width: 370px;
+    font-size: 18px;
+    line-height: 1.555;
+    padding: 63px 24px;
+    position: absolute;
+ 
+ 
+    background-color: rgba(33, 150, 243, 0.9);
+    color: var(--while-color);
+    transform: translateY(0);
+    transition: transform 250ms var(--timing-function);
+    
+}
+
+.project:hover .thumb-overlay {
+    transform:translateY(-100%);
+    
+}
