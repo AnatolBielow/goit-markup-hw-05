@@ -117,14 +117,15 @@ img {
     margin-left: 10px;
 }
 .icons-list a {
-    padding: 12px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
 }
 
  .icons-list li {
-    display: inline-block;
+
     fill: var(--icon-color);
-    width: 44px;
-    height: 44px;
     border-radius: 50%;
     transition: fill 250ms var(--timing-function);
     transition: background 250ms var(--timing-function);
@@ -136,12 +137,19 @@ img {
      fill: var(--while-color);
    
  }
- 
+ .feature-icon-container {
+     width: 270px;
+     height: 120px;
+     background-color: var(--backgroung-team-color);
+     margin-bottom: 30px;
+     display: flex;
+     align-items: center;
+ }
  
  .feature-icon {
      width: 70px;
      height: 70px;
-     margin: 25px 100px 55px 100px;
+
  }
 
  .header .container { 
@@ -237,6 +245,8 @@ margin-right: auto;
     width: 1600px;
     background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/background.jpg);
     height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     color: var(--header-color);
     text-align: center;
     font-size: 36px;
@@ -245,7 +255,7 @@ margin-right: auto;
 .hero-content {
     width: 660px;
     color: var(--while-color);
-    padding-top: 106px;
+   
 
 }
 .hero-title {
@@ -458,12 +468,13 @@ margin-right: auto;
 
 .socialmedia {
     margin-left: 0;
+    padding-top: 12px;
 }
-.socialmedia h2 {
+.socialmedia p {
     font-size: 14px;
     text-transform: uppercase;
+    font-weight: 400;
     letter-spacing: 0.03em;
-    margin-top: 12px;
     margin-bottom: 20px;
 }
 .socialmedia li {
