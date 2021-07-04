@@ -121,18 +121,14 @@ img {
     height: 44px;
     display: flex;
     align-items: center;
-}
-
- .icons-list li {
-
     fill: var(--icon-color);
     border-radius: 50%;
     transition: fill 250ms var(--timing-function);
     transition: background 250ms var(--timing-function);
     
  }
- .icons-list li:active,
- .icons-list li:hover {
+ .icons-list a:focus,
+ .icons-list a:hover {
      background: var(--pretty-color);
      fill: var(--while-color);
    
@@ -218,7 +214,7 @@ margin-right: auto;
     transition: color 250ms var(--timing-function);
 }
 
-.menu-link::after
+.menu-link a::after
  {
     content: '';
     position: absolute;
@@ -232,8 +228,8 @@ margin-right: auto;
     transition: opacity 250ms var(--timing-function);
 }
 
-.menu a:hover::after,
-.menu a:focus::after,
+.menu-link a:hover::after,
+.menu-link a:focus::after,
 .active a::after {
     opacity: 1;
 }
@@ -280,7 +276,8 @@ margin-right: auto;
     cursor: pointer;
     transition: background-color 250ms var(--timing-function);
 }
-.sign-in:hover {
+.sign-in:hover,
+.sign-in:focus {
     background-color: var(--button-hover);
 }
 
@@ -291,7 +288,10 @@ margin-right: auto;
     color: var(--text-color);    
 }    
 .features ul {
-    display: flex;
+    display: inline-flex;
+}
+.features ul :not(:last-child) {
+    margin-right: 30px;
 }
 .features-title {
     color: transparent;
@@ -313,14 +313,36 @@ margin-right: auto;
     margin-bottom: 10px;
 }
 /*--------Studio Section---------*/
-
  .studio {
     font-size: 16px;
     letter-spacing: 0.03em;
     padding-top: 0;
 }
-.studio ul {
+.boxes {
+    display: inline-flex;
+}
+.boxes :not(:last-child) {
+    margin-right: 30px;
+}
+.box {
+    /* display: inline-block; */
+    position: relative;
+    width: 370px;
+} 
+.box-content {
     display: flex;
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    text-transform: uppercase;
+
+    align-items: center;
+    bottom: 0;
+    background: rgba(47, 48, 58, 0.8);
+}
+.box-content h3 { 
+    font-size: 14px;
+    color: var(--while-color);
 }
  .studio-title {
     color: var(--header-color);
@@ -329,10 +351,7 @@ margin-right: auto;
     margin-bottom: 50px;
     text-align: center;
 }
-
-.studio-items:first-child {
-    margin-left: 0;
-}
+ 
  /*--------Team Section-----------*/
 .team {
     font-size: 16px;
@@ -381,16 +400,7 @@ margin-right: auto;
     margin-bottom: 1em;
 } 
 
-.member p{
-    margin-bottom: 15px;
-}
 
-.name {
-    color: var(--header-color);
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 10px;
-}
 /* -------Clients Section----- */
 .clients-title {
     color: var(--header-color);
@@ -415,7 +425,7 @@ margin-right: auto;
 }
 
 .clients-list a:hover,
-.clients-list a:active {
+.clients-list a:focus {
     border-color: var(--pretty-color);
     color: var(--pretty-color);
 }
@@ -496,7 +506,7 @@ address {
     letter-spacing: 0.03em;
     margin-bottom: 20px;
 }
-.socialmedia li {
+.socialmedia a {
     background: var(--footer-icon);
     transition: background 250ms var(--timing-function);
 }
@@ -579,7 +589,8 @@ button:hover {
 .project {
     transition: box-shadow 250ms var(--timing-function);
 }
-.project:hover {
+.project a:hover,
+.project a:focus {
     box-shadow: 0px 1px 1px
      rgba(0, 0, 0, 0.12),
      0px 4px 4px rgba(0, 0, 0, 0.06), 
@@ -623,4 +634,28 @@ button:hover {
 .project:hover .thumb-overlay {
     transform:translateY(-100%);
     
+}
+
+/* ----------Modal Window----------- */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.modal-content {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--while-color);
 }
