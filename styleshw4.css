@@ -18,9 +18,6 @@
     --icon-color: #afb1b8;
     --footer-icon: rgba(255, 255, 255, 0.1);
     --hero-background: url(../images/background.jpg);
-    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-
 }
 /*------Global Styles------*/
 html {
@@ -111,7 +108,7 @@ img {
     height: 20px;
 }
 .icons-list {
-    display: inline-flex;     
+    display: inline-flex;      
 }
 .icons-list :not(:last-child) {
     margin-right: 10px;
@@ -126,9 +123,9 @@ img {
  .icons-list li {
 
     fill: var(--icon-color);
+ 
     border-radius: 50%;
-    transition: fill 250ms var(--timing-function);
-    transition: background 250ms var(--timing-function);
+
     
  }
  .icons-list li:active,
@@ -208,35 +205,16 @@ margin-right: auto;
     display: block;
     position: relative;   
 }
-.menu a:hover,
-.menu a:focus,
+.menu-link:hover,
+.menu-link:focus,
 .contacts a:hover,
 .contacts a:focus,
-.active a
+.active
  {
     color: var(--pretty-color);
-    transition: color 250ms var(--timing-function);
+
 }
 
-.menu-link::after
- {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--pretty-color);
-    left: 0;
-    bottom: 0; 
-    opacity: 0;
-    transition: opacity 250ms var(--timing-function);
-}
-
-.menu a:hover::after,
-.menu a:focus::after,
-.active a::after {
-    opacity: 1;
-}
 
 
 /*----------Hero Section--------*/
@@ -278,7 +256,7 @@ margin-right: auto;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 250ms var(--timing-function);
+  
 }
 .sign-in:hover {
     background-color: var(--button-hover);
@@ -344,10 +322,12 @@ margin-right: auto;
  }
  .members {
      display: flex;
+    
+   
  }
  .members:first-child {
-    margin-left: 0;
-}
+     margin-left: 0;
+ }
 .team-title {
     color: var(--header-color);
     font-size: 36px;
@@ -365,32 +345,20 @@ margin-right: auto;
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-
 .member-item {
     width: 270px;
     padding: 30px 32px;
-} 
-
+}
 .member p{
     margin-bottom: 15px;
 }
-.name {
-    color: var(--header-color);
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 1em;
-} 
-
-.member p{
-    margin-bottom: 15px;
-}
-
 .name {
     color: var(--header-color);
     font-weight: 500;
     text-align: center;
     margin-bottom: 10px;
-}
+} 
+
 /* -------Clients Section----- */
 .clients-title {
     color: var(--header-color);
@@ -411,7 +379,7 @@ margin-right: auto;
     color: var(--icon-color);
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-    transition: color 250ms var(--timing-function);
+  
 }
 
 .clients-list a:hover,
@@ -482,7 +450,7 @@ address {
 }
 .adress-link a{
     color: var(--adress-link-color);
-    transition: color 250ms var(--timing-function);
+  
 }
 
 .socialmedia {
@@ -498,7 +466,7 @@ address {
 }
 .socialmedia li {
     background: var(--footer-icon);
-    transition: background 250ms var(--timing-function);
+ 
 }
 .adress-link a:hover,
 .adress-link a:focus {
@@ -536,10 +504,8 @@ button {
     border-radius: 4px;
     cursor: pointer; 
     
-    transition: background-color 250ms var(--timing-function),
-    color 250ms var(--timing-function),
-    box-shadow 250ms var(--timing-function); 
-}
+
+} 
 
 .all,
 button:focus,
@@ -575,9 +541,7 @@ button:hover {
     flex-basis: (100% / 3 - 30px);
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
-}
-.project {
-    transition: box-shadow 250ms var(--timing-function);
+
 }
 .project:hover {
     box-shadow: 0px 1px 1px
@@ -600,27 +564,4 @@ button:hover {
     border-bottom: 1px solid var(--border-color);
     cursor: pointer;
 } 
-.card-thumb {
-    position: relative;
-    overflow: hidden;
-}
 
-.thumb-overlay {
-    width: 370px;
-    font-size: 18px;
-    line-height: 1.555;
-    padding: 63px 24px;
-    position: absolute;
- 
- 
-    background-color: rgba(33, 150, 243, 0.9);
-    color: var(--while-color);
-    transform: translateY(0);
-    transition: transform 250ms var(--timing-function);
-    
-}
-
-.project:hover .thumb-overlay {
-    transform:translateY(-100%);
-    
-}
