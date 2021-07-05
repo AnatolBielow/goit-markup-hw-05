@@ -635,7 +635,8 @@ address {
      1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project:hover .thumb-overlay {
+.project:hover .thumb-overlay,
+.project:focus .thumb-overlay {
     transform:translateY(-100%);
     
 }
