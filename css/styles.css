@@ -469,12 +469,15 @@ margin-right: auto;
     color:var(--while-color);
     font-size: 14px;
     line-height: 1.714;
-    padding-bottom: 60px;
-    padding-top: 60px;
 }
 .footer .container {
     display: flex;
+    align-items: baseline;
+    padding: 60px 15px;
+}
 
+.footer-item {
+    margin: 0;
 }
 
 .footer li {
@@ -486,18 +489,16 @@ margin-right: auto;
 }
 address {
     font-style: normal;
-    margin-left: 0;
-    margin-right: 82px;
-   
+    margin-left: 0;  
 }
+
 .adress-link a{
     color: var(--adress-link-color);
     transition: color 250ms var(--timing-function);
 }
 
 .socialmedia {
-    margin-left: 0;
-    padding-top: 12px;
+    margin-left: 82px;
 }
 .socialmedia p {
     font-size: 14px;
@@ -582,23 +583,13 @@ address {
 
 }
 
-.card-set > .item {
+.card-set > .card {
     
     flex-basis: (100% / 3 - 30px);
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
 }
-.project {
-    transition: box-shadow 250ms var(--timing-function);
-}
-.project a:hover,
-.project a:focus {
-    box-shadow: 0px 1px 1px
-     rgba(0, 0, 0, 0.12),
-     0px 4px 4px rgba(0, 0, 0, 0.06), 
-     1px 4px 6px rgba(0, 0, 0, 0.16);
-    
-}
+
 .project-title {
     color: var(--header-color);
     font-size: 18px;
@@ -631,6 +622,17 @@ address {
     transform: translateY(0);
     transition: transform 250ms var(--timing-function);
     
+}
+.project {
+    
+    transition: box-shadow 250ms var(--timing-function);
+}
+.project:hover,
+.project:focus {
+    box-shadow: 0px 1px 1px
+     rgba(0, 0, 0, 0.12),
+     0px 4px 4px rgba(0, 0, 0, 0.06), 
+     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project:hover .thumb-overlay {
@@ -684,15 +686,14 @@ address {
     width: 30px;
     height: 30px;
     background-color:var(--while-color);
-    fill: var(--black-color);
+    color: var(--black-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 }
 
 [data-modal-close]:hover,
 [data-modal-close]:focus {
-    background-color: var(--backgroung-team-color);
-    border-color: var(--icon-color);
-    transition: background-color 250ms var(--timing-function), border-color 250ms var(--timing-function);
+    color: var(--pretty-color);
+    transition: color 250ms var(--timing-function);
     cursor: pointer;
 }
